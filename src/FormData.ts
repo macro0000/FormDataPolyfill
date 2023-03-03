@@ -23,7 +23,7 @@ export default class FormData implements FormDataPolyfill<FormData> {
     this.files.push({
       name: name,
       buffer: buffer,
-      fileName: path.split('.').slice(-2, -1)[0]
+      fileName: fileName || path.split('.').slice(-2, -1)[0]
     });
     return this
   }
